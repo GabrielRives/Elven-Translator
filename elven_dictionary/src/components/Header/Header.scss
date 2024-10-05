@@ -1,0 +1,47 @@
+@use "./src/styles/Variables.scss" as v;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__headContainer {
+    width: 80vw;
+    height: 10vh;
+    margin-top: 1em;
+
+    /* From https://css.glass */
+    background: v.$background-color;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid v.$border-color;
+    border-left: none;
+    border-bottom-right-radius: 5em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &__titleSite {
+      font-size: 2em;
+      padding-right: 1em;
+      color: v.$primary-color;
+    }
+  }
+
+  &__HeadSide {
+    &__nav-item-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      &__iconLogOut {
+        padding-top: 1.5em;
+        padding-left: 1em;
+        width: 2.5em;
+      }
+    }
+  }
+}

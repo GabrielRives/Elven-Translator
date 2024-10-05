@@ -1,0 +1,37 @@
+@use "./src/styles/Variables.scss" as v;
+
+.bodyContainer {
+  width: 99%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__search {
+    width: 90%;
+    margin-top: 1em;
+    background: v.$background-color;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid v.$border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5em;
+
+    &__searchBarTitle {
+      color: v.$primary-color;
+      font-size: 1.25em;
+      margin: 0;
+      padding-top: 0.5em;
+    }
+    &__searchInput {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
