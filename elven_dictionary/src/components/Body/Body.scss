@@ -1,5 +1,12 @@
 @use "./src/styles/Variables.scss" as v;
 
+@font-face {
+  font-family: "Quenya";
+  src: url("../../fonts/QUENYA.woff") format("woff"); // Chemin vers ta police
+  font-size: 2em;
+  color: v.$primary-color;
+}
+
 .bodyContainer {
   width: 99%;
   height: 90vh;
@@ -9,6 +16,7 @@
 
   &__search {
     width: 90%;
+    height: 30%;
     margin-top: 1em;
     background: v.$background-color;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -28,10 +36,58 @@
     }
     &__searchInput {
       width: 100%;
+      padding: 0.5em;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      &__buttonSearch {
+        background-color: v.$primary-color;
+      }
+      &__researchField {
+        width: 80%;
+        height: 2.5em;
+        font-size: 1em;
+        background: v.$background-color;
+        color: v.$text-color;
+        backdrop-filter: blur(3.2px);
+        -webkit-backdrop-filter: blur(3.2px);
+        margin-bottom: 0.5em;
+      }
     }
   }
+  &__resultResearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: v.$primary-color;
+
+    &__entrie {
+      width: 20em;
+      color: v.$primary-color;
+
+      &__contained {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        background: v.$background-color;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3.2px);
+        -webkit-backdrop-filter: blur(3.2px);
+        border: 1px solid v.$border-color;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+.elvenFont {
+  font-family: "Quenya", Fallback, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  margin: 0;
+  padding-bottom: 0.5em;
 }

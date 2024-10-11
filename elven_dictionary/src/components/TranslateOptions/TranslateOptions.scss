@@ -1,0 +1,19 @@
+@use "./src/styles/Variables.scss" as v;
+
+.languageContainer {
+  padding: 0.5em;
+  width: 12em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &__languages {
+    height: 2.75em;
+    display: flex;
+
+    &__flag {
+      width: 2.5em;
+      transition-duration: 1s;
+    }
+  }
+}
