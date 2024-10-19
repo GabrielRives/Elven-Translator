@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Quenya";
-  src: url("../../fonts/QUENYA.woff") format("woff"); // Chemin vers ta police
+  src: url("../../fonts/tngani.woff") format("woff"); // Chemin vers ta police
   font-size: 2em;
   color: v.$primary-color;
 }
@@ -77,6 +77,9 @@
         border: 1px solid v.$border-color;
         margin-bottom: 0.5em;
       }
+    }
+    &__numberFound {
+      margin-left: 1em;
     }
   }
 }
