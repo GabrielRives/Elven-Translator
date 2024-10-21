@@ -12,8 +12,8 @@ function Body() {
   const [isLoading, setIsLoading] = useState(false); // Ajouter l'état pour gérer le chargement
 
   // Récupérer la langue sélectionnée dans le store Redux
-  const selectedLanguage = useSelector((store) => store.translateHome.selectedLanguage);
-
+  const selectedLanguage = useSelector((store) => store.translateHome.resultLanguage);
+  console.log("Selected language:", selectedLanguage);
   const handleInputChange = (e) => {
     setSearchWord(e.target.value);
   };
@@ -30,6 +30,7 @@ function Body() {
     try {
       // Lancer la requête réseau
       const response = await fetch(`/translate?word=${searchWord}&language=${selectedLanguage}`);
+
       const data = await response.json();
 
       // Calculer le temps écoulé
@@ -116,7 +117,7 @@ function Body() {
                     <div className="bodyContainer__resultResearch__entrie__contained" key={index}>
                       <p>
                         <strong style={{ fontSize: "1.5em" }}>{item.quenyaword} : </strong>({item.identifier}){" "}
-                        {item[resultLanguage]}
+                        {item[resultLanguage + "word"]}
                       </p>
                       <p className="elvenFont">{item.quenyaword}</p>
                     </div>

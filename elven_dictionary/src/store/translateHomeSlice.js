@@ -6,7 +6,7 @@ const initialState = {
   research: "Your research",
   validButton: "Validate",
   resultFound: "matching results for",
-  resultLanguage: "englishword",
+  resultLanguage: "english",
 };
 
 const translateHomeSlice = createSlice({
@@ -34,7 +34,7 @@ const translateHomeSlice = createSlice({
         research: "Votre recherche",
         validButton: "Valider",
         resultFound: "résultats correspondants pour",
-        resultLanguage: "frenchword",
+        resultLanguage: "french",
       };
     },
 
@@ -46,7 +46,7 @@ const translateHomeSlice = createSlice({
         research: "Your research",
         validButton: "Validate",
         resultFound: "matching results for",
-        resultLanguage: "englishword",
+        resultLanguage: "english",
       };
     },
 
@@ -58,7 +58,7 @@ const translateHomeSlice = createSlice({
         research: "Su búsqueda",
         validButton: "Validar",
         resultFound: "resultados correspondientes para",
-        resultLanguage: "spanishword",
+        resultLanguage: "spanish",
       };
     },
   },
